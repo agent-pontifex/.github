@@ -1,0 +1,153 @@
+{
+  "$schema": "./repository-relationships.schema.json",
+  "audience": "public",
+  "generated": {
+    "complete_for_visibility": "public",
+    "generated_at": "2026-08-05T23:41:16Z",
+    "generator_version": "2026-08-04.1",
+    "inventory_digest": "sha256:dde78cc0c7c9a36588105a3b95f27ad203780fc9fd55b1e71a0b5d584037321b",
+    "managed_by": "ore-repository-relationship-rollout",
+    "omitted_repository_count": 0,
+    "private_repositories_omitted": false,
+    "source": "GitHub GraphQL repository inventory plus reviewed manual declarations"
+  },
+  "owner": {
+    "account_type": "organization",
+    "dotgithub_repository": "agent-pontifex/.github",
+    "github_id": "313080782",
+    "linear_project": {
+      "id": "71806431-748e-4332-b03a-820079d61ec0",
+      "name": "github.com/agent-pontifex",
+      "team_id": "eb8ab169-5afe-4b6f-9cab-3f2aa3e887dc",
+      "url": "https://linear.app/denman/project/githubcomagent-pontifex-1d2deb2be3c7",
+      "workspace": "denman"
+    },
+    "login": "agent-pontifex",
+    "mapping_id": "context:agent-pontifex"
+  },
+  "private_registry": {
+    "contains_non_public_inventory": false,
+    "digest": "sha256:437e63a987112fbf3039185435e0056727d956db52df217352f7bf5186b60603",
+    "path": "owners/agent-pontifex.json",
+    "repository": "approved-private-registry"
+  },
+  "relationships": [
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:303079742888eb3e96c51e3230c7c514ecd24fd22345adc101257ffaf180357e",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-sdk.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:2e1a8410b38c4d4f81a2174583697bf6ae0a12479882710593f7458056fe297a",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/ai-agent-bridge.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub GraphQL repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:f3333c0fc58f5defc9e013c00f0dedae69cd28add3cd73d74c2bb5a2dfc896b0",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/ai-agent-coordinator.rs",
+      "type": "governs"
+    }
+  ],
+  "repositories": [
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/.github",
+      "github_id": "1324265811",
+      "name": ".github",
+      "owner": "agent-pontifex",
+      "roles": [
+        "community-health",
+        "governance",
+        "relationship-registry"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/agent-pontifex/.github",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-sdk.rs",
+      "github_id": "1323360878",
+      "name": "agent-sdk.rs",
+      "owner": "agent-pontifex",
+      "roles": [
+        "sdk"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/agent-pontifex/agent-sdk.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/ai-agent-bridge.rs",
+      "github_id": "1323360810",
+      "name": "ai-agent-bridge.rs",
+      "owner": "agent-pontifex",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/agent-pontifex/ai-agent-bridge.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/ai-agent-coordinator.rs",
+      "github_id": "1323360846",
+      "name": "ai-agent-coordinator.rs",
+      "owner": "agent-pontifex",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-graphql-api",
+      "url": "https://github.com/agent-pontifex/ai-agent-coordinator.rs",
+      "visibility": "public"
+    }
+  ],
+  "schema_version": 1,
+  "unresolved_hints": []
+}

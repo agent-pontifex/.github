@@ -4,6 +4,45 @@
     "composition_policy": {
       "type": "object"
     },
+    "interoperability_policy": {
+      "properties": {
+        "contract": {
+          "type": "string"
+        },
+        "human_identity_authority": {
+          "const": "platform://shared-auth"
+        },
+        "machine_identity_authority": {
+          "const": "platform://fiducia-cloud"
+        },
+        "package_and_artifact_authority": {
+          "const": "platform://zed-pkg"
+        },
+        "protocol_authority": {
+          "const": "agent-pontifex/agent-sdk.rs"
+        },
+        "repository_write_authority": {
+          "const": "platform://fiducia-cloud"
+        },
+        "secret_encryption_authority": {
+          "const": "platform://sops"
+        },
+        "secret_materialization_policy": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "contract",
+        "protocol_authority",
+        "repository_write_authority",
+        "human_identity_authority",
+        "machine_identity_authority",
+        "package_and_artifact_authority",
+        "secret_encryption_authority",
+        "secret_materialization_policy"
+      ],
+      "type": "object"
+    },
     "organization": {
       "type": "string"
     },
@@ -31,7 +70,8 @@
     "privacy",
     "repositories",
     "relationships",
-    "composition_policy"
+    "composition_policy",
+    "interoperability_policy"
   ],
   "title": "Organization repository relationships",
   "type": "object"

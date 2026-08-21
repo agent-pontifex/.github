@@ -65,6 +65,8 @@ Do not use destructive commands merely to make tests pass, clear a conflict, sim
 
 Use additive branches, separate clean worktrees or clones, explicit path staging, ordinary commits, non-force pushes, patch-based edits, read-only queries, dry runs, backups, additive migrations, and reversible roll-forward changes. Leave unrelated work untouched. When safe progress is impossible, preserve all state and report the exact blocker.
 
+When histories must be combined, avoid git rebase in favor of git merge and resolve the result semantically under the conflict policy above.
+
 ## Source ownership and cross-repository context
 
 Edit authoritative sources rather than generated mirrors, vendored copies, caches, or downstream consumers. Identify generators and regenerate derived artifacts from reviewed sources. Never detach, absorb, relocate, remove, or rewrite a submodule or worktree. Cross-repository behavior must be understood across the owning organization and relevant external organizations before contracts are changed.
@@ -72,6 +74,8 @@ Edit authoritative sources rather than generated mirrors, vendored copies, cache
 ## Secrets and sensitive data
 
 Never print, log, commit, paste into issues, include in fixtures, or expose tokens, passwords, private keys, session material, database URLs, customer data, legal records, private health data, production data, or unpublished security details. Use approved secret stores, placeholders, and redacted diagnostics.
+
+Only SOPS-encrypted environment files matching `env/enc/*.env.enc` may be tracked. Decrypted files matching `env/dec/*.env` must remain ignored and untracked; materialize them only through reviewed `just` recipes, SOPS-aware Nix activation outside the Nix store, or the runtime secret provider. Never place plaintext tokens in either tree, the Nix store, or a build artifact.
 
 ## Pull requests, validation, and evidence
 

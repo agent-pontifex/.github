@@ -26,7 +26,6 @@ REQUIRED = [
     'scripts/validate_repository_relationships.py',
 ]
 PHRASES = [
-    'avoid git rebase in favor of git merge',
     'git stash', 'git reset', 'git clean', 'git filter-repo',
     '3–10 relevant commits', 'Never report',
 ]
@@ -37,9 +36,11 @@ SECRET_PATTERNS = [
     re.compile(r'(?i)authorization:\\s*bearer\\s+[A-Za-z0-9._-]{16,}'),
 ]
 
+
 def fail(message: str) -> None:
     print(f'ERROR: {message}', file=sys.stderr)
     raise SystemExit(1)
+
 
 missing = [path for path in REQUIRED if not (ROOT / path).is_file()]
 if missing:
@@ -49,6 +50,18 @@ agents = (ROOT / 'agents.md').read_text(encoding='utf-8')
 for phrase in PHRASES:
     if phrase not in agents:
         fail(f'agents.md missing required phrase: {phrase!r}')
+
+# Accept either the legacy preference sentence or the current, stronger
+# fail-closed denylist. The validator must check policy semantics rather than
+# forcing one exact prose rendering forever.
+legacy_rebase_policy = 'avoid git rebase in favor of git merge' in agents
+strong_rebase_policy = (
+    '## Hard denylist for automated agents' in agents
+    and '`git rebase`' in agents
+    and 'never execute or recommend' in agents
+)
+if not (legacy_rebase_policy or strong_rebase_policy):
+    fail('agents.md must avoid or explicitly prohibit git rebase')
 
 for path in ROOT.rglob('*'):
     if not path.is_file() or '.git' in path.parts:
@@ -74,7 +87,7 @@ for path in workflow_paths:
     if 'timeout-minutes:' not in text:
         fail(f'workflow lacks timeout: {path.relative_to(ROOT)}')
     for number, line in enumerate(text.splitlines(), 1):
-        match = re.search(r'^\\s*(?:-\\s+)?uses:\\s*([^\\s#]+)', line)
+        match = re.search(r'^\s*(?:-\s+)?uses:\s*([^\s#]+)', line)
         if not match:
             continue
         ref = match.group(1)

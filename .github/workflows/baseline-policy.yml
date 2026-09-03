@@ -23,3 +23,5 @@ jobs:
           persist-credentials: false
       - name: Validate organization baseline
         run: python3 scripts/validate_baseline.py .
+      - name: Validate interoperability authorities
+        run: python3 scripts/validate_interoperability_policy.py .

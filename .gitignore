@@ -2,3 +2,9 @@ tmp
 temp
 tmp/worktrees
 temp/worktrees
+
+# SOPS environment layout: ciphertext is trackable; plaintext is not.
+env/enc/*.env
+env/enc/**/*.env
+env/dec/*.env
+env/dec/**/*.env

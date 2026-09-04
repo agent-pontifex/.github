@@ -24,6 +24,11 @@ REQUIRED = [
     'docs/REPOSITORY_RELATIONSHIPS.md',
     'scripts/repository_relationships_lib.py',
     'scripts/validate_repository_relationships.py',
+    'scripts/validate_interoperability_policy.py',
+    'architecture/INTEROPERABILITY_CONTRACT.md',
+    'architecture/REPOSITORY_RELATIONSHIPS.md',
+    'architecture/repository-relationships.json',
+    'architecture/repository-relationships.schema.json',
 ]
 PHRASES = [
     'git stash', 'git reset', 'git clean', 'git filter-repo',
@@ -33,7 +38,7 @@ SECRET_PATTERNS = [
     re.compile(r'gh[pousr]_[A-Za-z0-9]{20,}'),
     re.compile(r'github_pat_[A-Za-z0-9_]{20,}'),
     re.compile(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),
-    re.compile(r'(?i)authorization:\\s*bearer\\s+[A-Za-z0-9._-]{16,}'),
+    re.compile(r'(?i)authorization:\s*bearer\s+[A-Za-z0-9._-]{16,}'),
 ]
 
 
@@ -47,12 +52,14 @@ if missing:
     fail('missing required files: ' + ', '.join(missing))
 
 agents = (ROOT / 'agents.md').read_text(encoding='utf-8')
+if agents != (ROOT / 'AGENTS.md').read_text(encoding='utf-8'):
+    fail('AGENTS.md compatibility mirror differs from agents.md')
 for phrase in PHRASES:
     if phrase not in agents:
         fail(f'agents.md missing required phrase: {phrase!r}')
 
 # Accept either the legacy preference sentence or the current, stronger
-# fail-closed denylist. The validator must check policy semantics rather than
+# fail-closed denylist. The validator checks policy semantics rather than
 # forcing one exact prose rendering forever.
 legacy_rebase_policy = 'avoid git rebase in favor of git merge' in agents
 strong_rebase_policy = (

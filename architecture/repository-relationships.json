@@ -8,6 +8,61 @@
     "production_source_checkout": "forbidden as a runtime deployment mechanism"
   },
   "inventory_scope": "public-repositories-plus-role-contracts",
+  "interoperability_policy": {
+    "contract": "architecture/INTEROPERABILITY_CONTRACT.md",
+    "human_identity_authority": "platform://shared-auth",
+    "human_identity_constraints": {
+      "authorization_owner": "product-local",
+      "caller_bearer_as_downstream_authorization": "forbidden",
+      "introspection": {
+        "authority": "platform://shared-auth",
+        "raw_token_role": "inspected-data-only",
+        "service_credential": "required-and-separate"
+      },
+      "jwt_verification": "local verification with pinned issuer, audience, and JWKS policy",
+      "scope": "human-and-operator-authentication-only"
+    },
+    "machine_credential_policy": {
+      "audience_bound": true,
+      "least_privilege": true,
+      "scope": "selected-agent-and-tool",
+      "short_lived": true
+    },
+    "machine_identity_authority": "platform://fiducia-cloud",
+    "package_and_artifact_authority": "platform://zed-pkg",
+    "protocol_authority": "agent-pontifex/agent-sdk.rs",
+    "repository_write_authority": "platform://fiducia-cloud",
+    "repository_write_constraints": {
+      "canonical_repository_format": "owner/repo",
+      "fail_closed_on": [
+        "missing-authority",
+        "partial-scope",
+        "stale-token",
+        "expired-lease",
+        "mismatched-holder-or-scope"
+      ],
+      "fencing_token": {
+        "maximum": 9007199254740991,
+        "minimum": 1,
+        "required_on_protected_write": true
+      },
+      "lease_scope": "complete-atomic-normalized-path-set",
+      "renewal_must_match": [
+        "repository",
+        "path-set",
+        "holder",
+        "current-fencing-token"
+      ]
+    },
+    "secret_encryption_authority": "platform://sops",
+    "secret_materialization_policy": {
+      "decrypted_files": "env/dec/*.env must be ignored and untracked",
+      "encrypted_files": "only SOPS-encrypted env/enc/*.env.enc files may be tracked",
+      "materialization": "reviewed just recipe, SOPS-aware Nix activation outside the Nix store, or runtime secret provider",
+      "nix_store_plaintext": "forbidden",
+      "plaintext_tokens": "forbidden"
+    }
+  },
   "observability_policy": {
     "logs": "structured output with trace_id/span_id correlation",
     "metrics": "Prometheus-compatible bounded-cardinality metrics",
@@ -54,12 +109,60 @@
       "to": "agent-pontifex/ai-agent-coordinator.rs"
     },
     {
+      "from": "agent-pontifex/agent-sdk.rs",
+      "kind": "protocol_authority_for",
+      "rationale": "the versioned Agent Pontifex SDK owns bridge envelopes, discovery contracts, capabilities, and conformance fixtures",
+      "source_basis": "interop-contract",
+      "status": "required",
+      "to": "agent-pontifex/ai-agent-bridge.rs"
+    },
+    {
+      "from": "agent-pontifex/agent-sdk.rs",
+      "kind": "protocol_authority_for",
+      "rationale": "the versioned Agent Pontifex SDK owns coordinator envelopes, discovery contracts, capabilities, and conformance fixtures",
+      "source_basis": "interop-contract",
+      "status": "required",
+      "to": "agent-pontifex/ai-agent-coordinator.rs"
+    },
+    {
+      "from": "organization://agent-pontifex",
+      "kind": "repository_writes_fenced_by",
+      "rationale": "Fiducia Cloud owns external repository/path-set lease authority and current fencing tokens",
+      "source_basis": "interop-contract",
+      "status": "platform-default",
+      "to": "platform://fiducia-cloud"
+    },
+    {
+      "from": "organization://agent-pontifex",
+      "kind": "human_identity_via",
+      "rationale": "Shared Auth authenticates humans/operators; caller bearers never become downstream authorization and introspection uses separate service credentials",
+      "source_basis": "interop-contract",
+      "status": "platform-default",
+      "to": "platform://shared-auth"
+    },
+    {
+      "from": "organization://agent-pontifex",
+      "kind": "workload_identity_via",
+      "rationale": "Fiducia owns workload identity where its coordination contract applies; scoped agent credentials remain distinct from human identity",
+      "source_basis": "interop-contract",
+      "status": "platform-default",
+      "to": "platform://fiducia-cloud"
+    },
+    {
       "from": "organization://agent-pontifex",
       "kind": "packaged_via",
       "rationale": "Zed resolves artifacts while submodules compose editable source",
       "source_basis": "platform-policy",
       "status": "platform-default",
       "to": "platform://zed-pkg"
+    },
+    {
+      "from": "organization://agent-pontifex",
+      "kind": "environment_secrets_encrypted_via",
+      "rationale": "only SOPS ciphertext at env/enc/*.env.enc is trackable; env/dec/*.env remains local plaintext",
+      "source_basis": "interop-contract",
+      "status": "platform-default",
+      "to": "platform://sops"
     }
   ],
   "repositories": [

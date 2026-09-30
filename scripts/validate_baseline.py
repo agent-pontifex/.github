@@ -23,6 +23,8 @@ REQUIRED = [
     'repository-relationships.manual.schema.json',
     'docs/REPOSITORY_RELATIONSHIPS.md',
     'scripts/repository_relationships_lib.py',
+    'scripts/refresh_public_relationships.py',
+    'scripts/validate_live_public_inventory.py',
     'scripts/validate_repository_relationships.py',
     'scripts/validate_interoperability_policy.py',
     'architecture/INTEROPERABILITY_CONTRACT.md',
@@ -57,6 +59,18 @@ if agents != (ROOT / 'AGENTS.md').read_text(encoding='utf-8'):
 for phrase in PHRASES:
     if phrase not in agents:
         fail(f'agents.md missing required phrase: {phrase!r}')
+
+# The mandatory GitFlow section is authoritative: feature/fix work integrates
+# through dev, while main/master are release branches. Reject prose that can
+# instruct an automated agent to bypass that promotion boundary.
+if '`dev` is the integration branch' not in agents:
+    fail('agents.md must declare dev as the integration branch')
+for forbidden in (
+    'Highly prefer an existing primary branch, in this order: `main`, `dev`, then `master`.',
+    'Work directly on the selected primary branch',
+):
+    if forbidden in agents:
+        fail(f'agents.md contradicts mandatory dev-first GitFlow policy: {forbidden!r}')
 
 # Accept either the legacy preference sentence or the current, stronger
 # fail-closed denylist. The validator checks policy semantics rather than

@@ -9,9 +9,12 @@ on:
       - repository-relationships.manual.schema.json
       - docs/REPOSITORY_RELATIONSHIPS.md
       - scripts/repository_relationships_lib.py
+      - scripts/refresh_public_relationships.py
       - scripts/validate_repository_relationships.py
+      - scripts/validate_live_public_inventory.py
       - .github/workflows/repository-relationships.yml
   push:
+    branches: [dev, main]
     paths:
       - repository-relationships.json
       - repository-relationships.manual.json
@@ -19,7 +22,9 @@ on:
       - repository-relationships.manual.schema.json
       - docs/REPOSITORY_RELATIONSHIPS.md
       - scripts/repository_relationships_lib.py
+      - scripts/refresh_public_relationships.py
       - scripts/validate_repository_relationships.py
+      - scripts/validate_live_public_inventory.py
       - .github/workflows/repository-relationships.yml
   workflow_dispatch:
 
@@ -32,7 +37,7 @@ concurrency:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - name: Check out repository
@@ -41,3 +46,11 @@ jobs:
           persist-credentials: false
       - name: Validate relationship registry
         run: python3 scripts/validate_repository_relationships.py .
+      - name: Validate live public repository inventory
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/validate_live_public_inventory.py .
+      - name: Require deterministic public relationship evidence
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/refresh_public_relationships.py --check .

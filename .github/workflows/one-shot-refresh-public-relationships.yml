@@ -1,0 +1,41 @@
+name: one-shot public relationship refresh
+
+on:
+  push:
+    branches:
+      - fix/governance-hardening-v2-20260930
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: true
+      - name: Regenerate from public-only inventory
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/refresh_public_relationships.py .
+      - name: Validate generated registry before commit
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 scripts/validate_repository_relationships.py .
+          python3 scripts/validate_live_public_inventory.py .
+          python3 scripts/refresh_public_relationships.py --check .
+      - name: Remove helper and commit reviewed generated evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm .github/workflows/one-shot-refresh-public-relationships.yml
+          git add repository-relationships.json docs/REPOSITORY_RELATIONSHIPS.md .github/workflows/one-shot-refresh-public-relationships.yml
+          git diff --cached --check
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'docs: refresh public repository relationship evidence'
+          git push origin HEAD:fix/governance-hardening-v2-20260930

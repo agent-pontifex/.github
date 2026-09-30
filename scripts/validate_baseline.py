@@ -23,6 +23,8 @@ REQUIRED = [
     'repository-relationships.manual.schema.json',
     'docs/REPOSITORY_RELATIONSHIPS.md',
     'scripts/repository_relationships_lib.py',
+    'scripts/refresh_public_relationships.py',
+    'scripts/validate_live_public_inventory.py',
     'scripts/validate_repository_relationships.py',
     'scripts/validate_interoperability_policy.py',
     'architecture/INTEROPERABILITY_CONTRACT.md',

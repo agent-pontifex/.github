@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "agent-pontifex.ores-integration/v1",
+  "principles": {
+    "least_capability": true,
+    "product_contract_authority": "agent-pontifex/ap-interfaces",
+    "typespec_json_schema_peer_authority": true,
+    "wit_default_role": "projection",
+    "generated_artifacts_are_authority": false,
+    "unknown_connectors_default_enabled": false
+  },
+  "shared_dependencies": {
+    "interfaces": "ORESoftware/ores-interfaces",
+    "contract_parity": "ORESoftware/typespec-json-schema-validator",
+    "wit": "ORESoftware/ores-wit",
+    "middleware": "ORESoftware/ores-middleware",
+    "secrets_at_rest": "ORESoftware/ores-sops",
+    "compose": "ORESoftware/ores-compose",
+    "browser_workers": "ORESoftware/ores-sw.js",
+    "telemetry": "ores-otel/ores.otel.log",
+    "transport": "ORESoftware/ores-transport",
+    "locks_and_leases": "ORESoftware/ores-locks-and-leases"
+  },
+  "repositories": {
+    "ap-interfaces": {
+      "required": ["interfaces", "contract_parity", "wit"],
+      "optional": [],
+      "forbidden_as_authority": ["wit", "generated_artifacts"]
+    },
+    "ap-lib-core": {
+      "required": ["locks_and_leases"],
+      "optional": ["telemetry", "middleware", "transport"],
+      "role": "server_integration_seam"
+    },
+    "ap-api-server.rs": {
+      "required": ["middleware", "telemetry", "transport"],
+      "optional": ["compose"],
+      "surface": "http_write"
+    },
+    "ap-web-server.rs": {
+      "required": ["middleware", "telemetry", "transport"],
+      "optional": ["browser_workers", "compose"],
+      "surface": "http_read_web"
+    },
+    "ap-admin-api-server.rs": {
+      "required": ["middleware", "telemetry", "transport"],
+      "optional": ["compose"],
+      "surface": "admin_http_write",
+      "requires_admin_isolation": true
+    },
+    "ap-admin-web-server.rs": {
+      "required": ["middleware", "telemetry", "transport"],
+      "optional": ["compose"],
+      "surface": "admin_http_read_web",
+      "requires_admin_isolation": true
+    },
+    "ap-mcp-server.rs": {
+      "required": ["telemetry"],
+      "optional": ["compose"],
+      "surface": "stdio_read_only",
+      "default_network_listener": false,
+      "default_cloud_connectors": false
+    },
+    "ap-infra": {
+      "required": ["compose"],
+      "optional": ["secrets_at_rest", "telemetry"],
+      "role": "deployment_and_local_topology"
+    },
+    "ap-clients": {
+      "required": ["interfaces", "wit"],
+      "optional": [],
+      "role": "generated_and_adapted_clients"
+    },
+    "ap-cli": {
+      "required": ["interfaces"],
+      "optional": ["telemetry"],
+      "role": "thin_client_cli"
+    },
+    "ap-desktop-app.rs": {
+      "required": ["interfaces", "telemetry"],
+      "optional": ["compose"],
+      "surface": "native_desktop"
+    },
+    "ap-flutter": {
+      "required": ["interfaces"],
+      "optional": ["telemetry", "browser_workers"],
+      "surface": "flutter_multi_platform"
+    },
+    "ap-sync": {
+      "required": ["interfaces"],
+      "optional": ["browser_workers", "telemetry"],
+      "surface": "sync"
+    }
+  },
+  "config_rules": {
+    ".ores-mw.toml": "only_if_middleware_consumed",
+    ".ores-otel.toml": "only_if_telemetry_consumed",
+    ".ores-compose.yaml": "only_if_directly_runnable_or_in_ap_infra",
+    ".ores-wit.toml": "only_if_wit_owned_or_consumed",
+    ".ores-sops.toml": "only_if_sops_managed_ciphertext_exists",
+    ".cli-flags.toml": "only_if_flags_2_env_consumed",
+    ".opto-sync.toml": "only_if_opto_sync_consumed",
+    ".ores-rl.toml": "only_if_rate_limit_consumed",
+    ".ores-lru.toml": "only_if_lru_consumed"
+  }
+}

@@ -30,3 +30,12 @@ Repositories in this organization use semantic conflict resolution with 3–10 r
 
 The public registry withholds private repository names and edges.
 <!-- END MANAGED REPOSITORY RELATIONSHIPS v1 -->
+
+## ORES integration
+
+Agent Pontifex consumes shared ORES capabilities through explicit least-capability boundaries rather than a blanket fleet bundle:
+
+- [Human-readable Agent Pontifex × ORES contract](architecture/ORES_INTEGRATION.md)
+- [Machine-readable adoption matrix](architecture/ores-integration.json)
+
+Product semantics remain authoritative in `agent-pontifex/ap-interfaces`; ORES middleware, telemetry, WIT, secrets, compose, worker and transport layers remain reusable infrastructure/projection capabilities and do not become duplicate product authorities.

@@ -3,13 +3,11 @@
   "audience": "public",
   "generated": {
     "complete_for_visibility": "public",
-    "generated_at": "2026-08-05T23:41:16Z",
+    "generated_at": "2026-09-30T15:38:34Z",
     "generator_version": "2026-08-04.1",
-    "inventory_digest": "sha256:dde78cc0c7c9a36588105a3b95f27ad203780fc9fd55b1e71a0b5d584037321b",
+    "inventory_digest": "sha256:023b431cb965999339d899e24f3963b2f6389eb37afd4041ff4fccf1badda95f",
     "managed_by": "ore-repository-relationship-rollout",
-    "omitted_repository_count": 0,
-    "private_repositories_omitted": false,
-    "source": "GitHub GraphQL repository inventory plus reviewed manual declarations"
+    "source": "GitHub REST repository inventory plus reviewed manual declarations"
   },
   "owner": {
     "account_type": "organization",
@@ -26,7 +24,7 @@
     "mapping_id": "context:agent-pontifex"
   },
   "private_registry": {
-    "contains_non_public_inventory": false,
+    "contains_non_public_inventory": true,
     "digest": "sha256:437e63a987112fbf3039185435e0056727d956db52df217352f7bf5186b60603",
     "path": "owners/agent-pontifex.json",
     "repository": "approved-private-registry"
@@ -37,7 +35,296 @@
       "evidence": [
         {
           "kind": "github-owner-membership",
-          "source": "GitHub GraphQL repository inventory"
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:dffccf0a45344dbc9f1c09f06e8f7e8fdd9425d91c83092a05a3dda5f31c29d0",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-api-server.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:f37521c382e1934a343cd212f2707cbd4a04a4dd3a55fe0f827dcf1f8d0f2f13",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-cli",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:6bd1d7f67b5e460677735ea2e49f56ab356649f893cde063f75908ed3c4ecc12",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-clients",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:9f5bce259c52b0b75037d6eb6b42bbe1810d45ee24a2071978f653453423c64d",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-daemon.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:cdcea2aba93cd822508819d4d7c3406a4ad7ab10c17f8b98bf69c3baff1a7237",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-desktop-app.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:68232e30de712e6a0310e904e3731434c2145520abb2100217a1c2ba7fb2d81b",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-flutter",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:5567b805ba0cc5ef027822b45da1171a18aa6959e1e3897d7986203c3657ef45",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-infra",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:a76e2238573d32392a96c3bfa72995667c716c27d4889e0235a076c403e10dec",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-interfaces",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:d6e4f981bbbdfd25984673766400527c2401ea528368ed7e5e3fb68e3baf76d6",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-lambdas",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:62638cc3ad62f724e281f246bce6528f9ac5c546549224646d064583916248fb",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-lib-core",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:4552309a04d052011004f9d8aeba2722944bbb39883d2ca583958e032e906ea6",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-mcp-server.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:ae54c091f088da4b1ec9c98ebd639986bb63626a7a6772dec325ca06dfa53d6f",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-monorepo",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:fe47caaa0e3d13c41e58fdf40fab88100088b97837233bf89f97bafc36357ca8",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-orm-core",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:ba9c5331cfa1107e109718822083ff21407b6d5b038055694655a9edf720e07f",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-pub-lib-core",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:7d8c5ab397e587fbfdbd2d6aa1253f7b2e093b46f33dc7526c19f5e7a2ee548a",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-sync",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:cfb46aa442b64665081814950f617716043502cf19134e54d621ed969f4f5342",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex-web-server.rs",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
+        }
+      ],
+      "from": "agent-pontifex/.github",
+      "id": "sha256:bc7452ce03ac9cf2f98713eb229b5eba0c05ee52c023111d74c15df61d7fee23",
+      "notes": "Organization .github policy and community-health defaults govern this sibling repository.",
+      "required": true,
+      "scope": "organization",
+      "status": "declared",
+      "to": "agent-pontifex/agent-pontifex.github.io",
+      "type": "governs"
+    },
+    {
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "kind": "github-owner-membership",
+          "source": "GitHub REST repository inventory"
         }
       ],
       "from": "agent-pontifex/.github",
@@ -54,7 +341,7 @@
       "evidence": [
         {
           "kind": "github-owner-membership",
-          "source": "GitHub GraphQL repository inventory"
+          "source": "GitHub REST repository inventory"
         }
       ],
       "from": "agent-pontifex/.github",
@@ -71,7 +358,7 @@
       "evidence": [
         {
           "kind": "github-owner-membership",
-          "source": "GitHub GraphQL repository inventory"
+          "source": "GitHub REST repository inventory"
         }
       ],
       "from": "agent-pontifex/.github",
@@ -82,6 +369,135 @@
       "status": "declared",
       "to": "agent-pontifex/ai-agent-coordinator.rs",
       "type": "governs"
+    },
+    {
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "family": "agent-pontifex",
+          "kind": "paired-repository-naming",
+          "source_role": "api-server",
+          "target_role": "interfaces"
+        }
+      ],
+      "from": "agent-pontifex/agent-pontifex-api-server.rs",
+      "id": "sha256:838a2c86319c8191cc8369d40385b63299375bdd2eea17d83dd17d010b84ccad",
+      "notes": "Conservative naming inference; confirm or override in the manual declaration file.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "agent-pontifex/agent-pontifex-interfaces",
+      "type": "depends_on"
+    },
+    {
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "family": "agent-pontifex",
+          "kind": "paired-repository-naming",
+          "source_role": "clients",
+          "target_role": "interfaces"
+        }
+      ],
+      "from": "agent-pontifex/agent-pontifex-clients",
+      "id": "sha256:a8c8e5de252761b9af22b0c480c4b2f6e70adf9822e3e9b96be0c42c03306976",
+      "notes": "Conservative naming inference; confirm or override in the manual declaration file.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "agent-pontifex/agent-pontifex-interfaces",
+      "type": "depends_on"
+    },
+    {
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "family": "agent-pontifex",
+          "kind": "paired-repository-naming"
+        }
+      ],
+      "from": "agent-pontifex/agent-pontifex-infra",
+      "id": "sha256:1e296249a113897b722b09194c778c14431b82d9e3b9b22dba4a891d0922942c",
+      "notes": "Conservative naming inference; confirm or override in the manual declaration file.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "agent-pontifex/agent-pontifex-monorepo",
+      "type": "deploys"
+    },
+    {
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "family": "agent-pontifex",
+          "kind": "paired-repository-naming",
+          "source_role": "mcp-server",
+          "target_role": "interfaces"
+        }
+      ],
+      "from": "agent-pontifex/agent-pontifex-mcp-server.rs",
+      "id": "sha256:07eee28ad071493b4ff963bbbf45a3c9dc7c1dbb3d9f9291b4a00dd207aa3358",
+      "notes": "Conservative naming inference; confirm or override in the manual declaration file.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "agent-pontifex/agent-pontifex-interfaces",
+      "type": "depends_on"
+    },
+    {
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "family": "agent-pontifex",
+          "kind": "paired-repository-naming",
+          "source_role": "sync",
+          "target_role": "interfaces"
+        }
+      ],
+      "from": "agent-pontifex/agent-pontifex-sync",
+      "id": "sha256:4153022d088192c53ba374fdc33d5958bc5f87bb0bc06fa6ac8b64fa53a40ce7",
+      "notes": "Conservative naming inference; confirm or override in the manual declaration file.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "agent-pontifex/agent-pontifex-interfaces",
+      "type": "depends_on"
+    },
+    {
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "family": "agent-pontifex",
+          "kind": "paired-repository-naming",
+          "source_role": "web-server",
+          "target_role": "interfaces"
+        }
+      ],
+      "from": "agent-pontifex/agent-pontifex-web-server.rs",
+      "id": "sha256:e6c6a08c099b4d73f5e7d338efef54a1452e2588359e43dec17061abce9fed4a",
+      "notes": "Conservative naming inference; confirm or override in the manual declaration file.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "agent-pontifex/agent-pontifex-interfaces",
+      "type": "depends_on"
+    },
+    {
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "kind": "repository-name",
+          "value": "agent-pontifex.github.io"
+        }
+      ],
+      "from": "agent-pontifex/agent-pontifex.github.io",
+      "id": "sha256:4c3e3532d96df6ecf0019ad167830cf48abc1b1190de765b8a16917f2ae49b4a",
+      "notes": "The conventional *.github.io repository documents the organization profile.",
+      "required": false,
+      "scope": "organization",
+      "status": "inferred",
+      "to": "agent-pontifex/.github",
+      "type": "documents"
     }
   ],
   "repositories": [
@@ -98,8 +514,263 @@
         "governance",
         "relationship-registry"
       ],
-      "source": "github-graphql-api",
+      "source": "github-rest-api",
       "url": "https://github.com/agent-pontifex/.github",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-api-server.rs",
+      "github_id": "1357364869",
+      "name": "agent-pontifex-api-server.rs",
+      "owner": "agent-pontifex",
+      "roles": [
+        "api-server"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-api-server.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-cli",
+      "github_id": "1357364607",
+      "name": "agent-pontifex-cli",
+      "owner": "agent-pontifex",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-cli",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-clients",
+      "github_id": "1357364307",
+      "name": "agent-pontifex-clients",
+      "owner": "agent-pontifex",
+      "roles": [
+        "clients"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-clients",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-daemon.rs",
+      "github_id": "1357383798",
+      "name": "agent-pontifex-daemon.rs",
+      "owner": "agent-pontifex",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-daemon.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-desktop-app.rs",
+      "github_id": "1357368542",
+      "name": "agent-pontifex-desktop-app.rs",
+      "owner": "agent-pontifex",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-desktop-app.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-flutter",
+      "github_id": "1357368237",
+      "name": "agent-pontifex-flutter",
+      "owner": "agent-pontifex",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-flutter",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-infra",
+      "github_id": "1357369651",
+      "name": "agent-pontifex-infra",
+      "owner": "agent-pontifex",
+      "roles": [
+        "infrastructure"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-infra",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-interfaces",
+      "github_id": "1357361210",
+      "name": "agent-pontifex-interfaces",
+      "owner": "agent-pontifex",
+      "roles": [
+        "interfaces"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-interfaces",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-lambdas",
+      "github_id": "1357368846",
+      "name": "agent-pontifex-lambdas",
+      "owner": "agent-pontifex",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-lambdas",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-lib-core",
+      "github_id": "1357362283",
+      "name": "agent-pontifex-lib-core",
+      "owner": "agent-pontifex",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-lib-core",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-mcp-server.rs",
+      "github_id": "1357367220",
+      "name": "agent-pontifex-mcp-server.rs",
+      "owner": "agent-pontifex",
+      "roles": [
+        "mcp-server"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-mcp-server.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-monorepo",
+      "github_id": "1357370556",
+      "name": "agent-pontifex-monorepo",
+      "owner": "agent-pontifex",
+      "roles": [
+        "monorepo"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-monorepo",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-orm-core",
+      "github_id": "1357363977",
+      "name": "agent-pontifex-orm-core",
+      "owner": "agent-pontifex",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-orm-core",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-pub-lib-core",
+      "github_id": "1357363639",
+      "name": "agent-pontifex-pub-lib-core",
+      "owner": "agent-pontifex",
+      "roles": [
+        "repository"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-pub-lib-core",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-sync",
+      "github_id": "1357367765",
+      "name": "agent-pontifex-sync",
+      "owner": "agent-pontifex",
+      "roles": [
+        "sync"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-sync",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex-web-server.rs",
+      "github_id": "1357365168",
+      "name": "agent-pontifex-web-server.rs",
+      "owner": "agent-pontifex",
+      "roles": [
+        "web-server"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex-web-server.rs",
+      "visibility": "public"
+    },
+    {
+      "archived": false,
+      "default_branch": "main",
+      "fork": false,
+      "full_name": "agent-pontifex/agent-pontifex.github.io",
+      "github_id": "1350993876",
+      "name": "agent-pontifex.github.io",
+      "owner": "agent-pontifex",
+      "roles": [
+        "documentation-site"
+      ],
+      "source": "github-rest-api",
+      "url": "https://github.com/agent-pontifex/agent-pontifex.github.io",
       "visibility": "public"
     },
     {
@@ -113,7 +784,7 @@
       "roles": [
         "sdk"
       ],
-      "source": "github-graphql-api",
+      "source": "github-rest-api",
       "url": "https://github.com/agent-pontifex/agent-sdk.rs",
       "visibility": "public"
     },
@@ -128,7 +799,7 @@
       "roles": [
         "repository"
       ],
-      "source": "github-graphql-api",
+      "source": "github-rest-api",
       "url": "https://github.com/agent-pontifex/ai-agent-bridge.rs",
       "visibility": "public"
     },
@@ -143,7 +814,7 @@
       "roles": [
         "repository"
       ],
-      "source": "github-graphql-api",
+      "source": "github-rest-api",
       "url": "https://github.com/agent-pontifex/ai-agent-coordinator.rs",
       "visibility": "public"
     }

@@ -10,6 +10,7 @@ on:
       - docs/REPOSITORY_RELATIONSHIPS.md
       - scripts/repository_relationships_lib.py
       - scripts/validate_repository_relationships.py
+      - scripts/validate_live_public_inventory.py
       - .github/workflows/repository-relationships.yml
   push:
     paths:
@@ -20,6 +21,7 @@ on:
       - docs/REPOSITORY_RELATIONSHIPS.md
       - scripts/repository_relationships_lib.py
       - scripts/validate_repository_relationships.py
+      - scripts/validate_live_public_inventory.py
       - .github/workflows/repository-relationships.yml
   workflow_dispatch:
 
@@ -41,3 +43,7 @@ jobs:
           persist-credentials: false
       - name: Validate relationship registry
         run: python3 scripts/validate_repository_relationships.py .
+      - name: Validate live public repository inventory
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/validate_live_public_inventory.py .

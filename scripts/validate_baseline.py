@@ -58,6 +58,18 @@ for phrase in PHRASES:
     if phrase not in agents:
         fail(f'agents.md missing required phrase: {phrase!r}')
 
+# The mandatory GitFlow section is authoritative: feature/fix work integrates
+# through dev, while main/master are release branches. Reject prose that can
+# instruct an automated agent to bypass that promotion boundary.
+if '`dev` is the integration branch' not in agents:
+    fail('agents.md must declare dev as the integration branch')
+for forbidden in (
+    'Highly prefer an existing primary branch, in this order: `main`, `dev`, then `master`.',
+    'Work directly on the selected primary branch',
+):
+    if forbidden in agents:
+        fail(f'agents.md contradicts mandatory dev-first GitFlow policy: {forbidden!r}')
+
 # Accept either the legacy preference sentence or the current, stronger
 # fail-closed denylist. The validator checks policy semantics rather than
 # forcing one exact prose rendering forever.

@@ -1,0 +1,433 @@
+{
+  "version": 1,
+  "organization": "agent-pontifex",
+  "inventory_visibility": "public-only",
+  "governance": {
+    "approval_required": true,
+    "unverified_fields_grant_no_access": true,
+    "separate_admin_deployments": true,
+    "public_registry_excludes_private_repositories": true
+  },
+  "repositories": [
+    {
+      "repository": "agent-pontifex/.github",
+      "category": "governance",
+      "trust_domain": "shared-library",
+      "source_authority": "canonical",
+      "release_unit": {
+        "kind": "none",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "none",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-api-server.rs",
+      "category": "app",
+      "trust_domain": "public-app",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "service",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "superseded",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-cli",
+      "category": "tooling",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "cli",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-clients",
+      "category": "sdk",
+      "trust_domain": "shared-library",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "sdk",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-daemon.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-desktop-app.rs",
+      "category": "app",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "application",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-flutter",
+      "category": "app",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "application",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-infra",
+      "category": "infrastructure",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-interfaces",
+      "category": "contracts",
+      "trust_domain": "shared-library",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "library",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "none",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-lambdas",
+      "category": "worker",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "service",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-lib-core",
+      "category": "source",
+      "trust_domain": "shared-library",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "library",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-mcp-server.rs",
+      "category": "app",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "service",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-monorepo",
+      "category": "integration",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "integration",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-orm-core",
+      "category": "source",
+      "trust_domain": "shared-library",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "library",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-pub-lib-core",
+      "category": "source",
+      "trust_domain": "shared-library",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "library",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-sync",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "library",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex-web-server.rs",
+      "category": "app",
+      "trust_domain": "public-app",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "service",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-pontifex.github.io",
+      "category": "documentation",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "site",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "none",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/agent-sdk.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/ai-agent-bridge.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    },
+    {
+      "repository": "agent-pontifex/ai-agent-coordinator.rs",
+      "category": "source",
+      "trust_domain": "unverified",
+      "source_authority": "unverified",
+      "release_unit": {
+        "kind": "unverified",
+        "identifiers": [],
+        "status": "unverified"
+      },
+      "deployment_targets": {
+        "environments": [],
+        "vpcs": [],
+        "cloud_identities": [],
+        "status": "unverified"
+      },
+      "database_scope": "unverified",
+      "lifecycle": "unverified",
+      "review_status": "inferred-needs-review"
+    }
+  ]
+}

@@ -27,7 +27,8 @@
       },
       "database_scope": "none",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-api-server.rs",
@@ -47,7 +48,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "superseded",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-cli",
@@ -67,7 +69,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-clients",
@@ -87,7 +90,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-daemon.rs",
@@ -107,7 +111,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-desktop-app.rs",
@@ -127,7 +132,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-flutter",
@@ -147,7 +153,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-infra",
@@ -167,7 +174,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-interfaces",
@@ -187,7 +195,8 @@
       },
       "database_scope": "none",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-lambdas",
@@ -207,7 +216,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-lib-core",
@@ -227,7 +237,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-mcp-server.rs",
@@ -247,7 +258,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-monorepo",
@@ -267,7 +279,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-orm-core",
@@ -287,7 +300,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-pub-lib-core",
@@ -307,7 +321,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-sync",
@@ -327,7 +342,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex-web-server.rs",
@@ -347,7 +363,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-pontifex.github.io",
@@ -367,7 +384,8 @@
       },
       "database_scope": "none",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/agent-sdk.rs",
@@ -387,7 +405,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/ai-agent-bridge.rs",
@@ -407,7 +426,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     },
     {
       "repository": "agent-pontifex/ai-agent-coordinator.rs",
@@ -427,7 +447,8 @@
       },
       "database_scope": "unverified",
       "lifecycle": "unverified",
-      "review_status": "inferred-needs-review"
+      "review_status": "inferred-needs-review",
+      "visibility": "public"
     }
   ]
 }

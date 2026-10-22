@@ -1,4 +1,6 @@
 # .github
+
+**Scripts:** [Use Rust; no new Python scripts](CONTRIBUTING.md#rust-first-scripts-and-automation). Python application code needs a documented special-case exception.
 Organization-wide GitHub, branching, agent, and delivery policy
 
 <!-- ore-org-baseline:begin -->
